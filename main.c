@@ -6,7 +6,7 @@
 /*   By: rkovinia <rkovinia@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/08 11:26:08 by rkovinia          #+#    #+#             */
-/*   Updated: 2026/10/09 15:08:22 by rkovinia         ###   ########.fr       */
+/*   Updated: 2026/10/09 15:31:47 by rkovinia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,9 @@ int	test_toupper(void);
 int	test_strlen(void);
 int	test_memset(void);
 int	test_bzero(void);
+int	test_memcpy(void);
+int	test_memmove(void);
+int	test_strlcpy(void);
 
 int	main(void)
 {
@@ -36,5 +39,8 @@ int	main(void)
 	errors += test_strlen();
 	errors += test_memset();
 	errors += test_bzero();
+	errors += test_memcpy();
+	errors += test_memmove();
+	errors += test_strlcpy();
 	return (errors != 0);
 }
