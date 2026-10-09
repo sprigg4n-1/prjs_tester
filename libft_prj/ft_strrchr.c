@@ -3,21 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rkovinia <rkovinia@student.42heilbronn.    +#+  +:+       +#+        */
+/*   By: romankovinia <romankovinia@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/07 14:55:04 by rkovinia          #+#    #+#             */
-/*   Updated: 2026/10/08 11:49:50 by rkovinia         ###   ########.fr       */
+/*   Updated: 2026/10/09 21:35:51 by romankovini      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strrchr(const char *s, int c)
 {
 	char	*last_char;
+	char	c_h;
+	int		len;
 
+	len = 0;
+	c_h = (char)c;
 	last_char = 0;
-	while (*s)
+	while (s[len])
+		len++;
+	while (len-- >= 0)
 	{
-		if (*s == c)
+		if (*s == c_h)
 			last_char = (char *)s;
 		s++;
 	}

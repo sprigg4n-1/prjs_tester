@@ -3,16 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   test_strlcpy.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rkovinia <rkovinia@student.42heilbronn.    +#+  +:+       +#+        */
+/*   By: romankovinia <romankovinia@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/09 15:15:37 by rkovinia          #+#    #+#             */
-/*   Updated: 2026/10/09 15:46:12 by rkovinia         ###   ########.fr       */
+/*   Updated: 2026/10/09 21:21:23 by romankovini      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
-#include <bsd/string.h>
+#ifdef __linux__
+# include <bsd/string.h>
+#endif
 #include "libft.h"
 
 #define GREEN "\033[32m"
