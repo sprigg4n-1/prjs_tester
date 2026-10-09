@@ -6,7 +6,7 @@
 /*   By: rkovinia <rkovinia@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/09 12:50:56 by rkovinia          #+#    #+#             */
-/*   Updated: 2026/10/09 14:50:11 by rkovinia         ###   ########.fr       */
+/*   Updated: 2026/10/09 16:50:13 by rkovinia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,12 @@ char	*ft_strdup(const char *s)
 {
 	char	*dupl;
 	size_t	i;
+	size_t	len;
 
-	dupl = malloc(ft_strlen(s) + 1);
+	len = 0;
+	while (s[len])
+		len++;
+	dupl = malloc(len + 1);
 	if (!dupl)
 		return (NULL);
 	i = 0;
