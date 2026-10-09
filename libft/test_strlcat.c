@@ -3,16 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   test_strlcat.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rkovinia <rkovinia@student.42heilbronn.    +#+  +:+       +#+        */
+/*   By: romankovinia <romankovinia@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/09 16:13:48 by rkovinia          #+#    #+#             */
-/*   Updated: 2026/10/09 16:15:23 by rkovinia         ###   ########.fr       */
+/*   Updated: 2026/10/09 21:21:39 by romankovini      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
+#ifdef __linux__
 # include <bsd/string.h>
+#endif
 #include "libft.h"
 
 #define GREEN "\033[32m"
