@@ -6,7 +6,7 @@
 /*   By: rkovinia <rkovinia@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/08 11:26:08 by rkovinia          #+#    #+#             */
-/*   Updated: 2026/10/12 12:20:06 by rkovinia         ###   ########.fr       */
+/*   Updated: 2026/10/12 13:00:24 by rkovinia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ int	test_atoi(void);
 int	test_calloc(void);
 int	test_strdup(void);
 int	test_substr(void);
+int	test_strjoin(void);
+int	test_strtrim(void);
 
 int	main(void)
 {
@@ -64,5 +66,7 @@ int	main(void)
 	errors += test_calloc();
 	errors += test_strdup();
 	errors += test_substr();
+	errors += test_strjoin();
+	errors += test_strtrim();
 	return (errors != 0);
 }
