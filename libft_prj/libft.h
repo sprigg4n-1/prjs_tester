@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rkovinia <rkovinia@student.42heilbronn.    +#+  +:+       +#+        */
+/*   By: romankovinia <romankovinia@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/06 12:11:44 by rkovinia          #+#    #+#             */
-/*   Updated: 2026/10/12 12:12:44 by rkovinia         ###   ########.fr       */
+/*   Updated: 2026/10/12 16:09:19 by romankovini      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,6 @@ char	*ft_strnstr(const char *big, const char *little, size_t len);
 char	*ft_strdup(const char *s);
 void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+char    *ft_itoa(int n);
 
 #endif

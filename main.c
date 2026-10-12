@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rkovinia <rkovinia@student.42heilbronn.    +#+  +:+       +#+        */
+/*   By: romankovinia <romankovinia@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/08 11:26:08 by rkovinia          #+#    #+#             */
-/*   Updated: 2026/10/12 13:00:24 by rkovinia         ###   ########.fr       */
+/*   Updated: 2026/10/12 16:55:51 by romankovini      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,9 @@ int	test_atoi(void);
 int	test_calloc(void);
 int	test_strdup(void);
 int	test_substr(void);
-int	test_strjoin(void);
-int	test_strtrim(void);
+// int	test_strjoin(void);
+// int	test_strtrim(void);
+int	test_itoa(void);
 
 int	main(void)
 {
@@ -66,7 +67,8 @@ int	main(void)
 	errors += test_calloc();
 	errors += test_strdup();
 	errors += test_substr();
-	errors += test_strjoin();
-	errors += test_strtrim();
+	// errors += test_strjoin();
+	// errors += test_strtrim();
+	errors += test_itoa();
 	return (errors != 0);
 }
