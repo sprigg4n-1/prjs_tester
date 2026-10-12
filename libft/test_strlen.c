@@ -6,12 +6,11 @@
 /*   By: rkovinia <rkovinia@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/08 12:10:50 by rkovinia          #+#    #+#             */
-/*   Updated: 2026/10/08 12:23:42 by rkovinia         ###   ########.fr       */
+/*   Updated: 2026/10/12 12:25:21 by rkovinia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <ctype.h>
 #include <string.h>
 #include "libft.h"
 
@@ -21,25 +20,32 @@
 
 int	test_strlen(void)
 {
-	int		errors;
-	int		expected;
-	int		got;
-	int		i;
-	char	*tests[] = {
+	int			errors;
+	size_t		expected;
+	size_t		got;
+	int			i;
+	const char	*tests[] = {
 		"", "a", "Hello, World",
 		"         ", "abc\0def", "\t\n\v", "\200\377",
-		"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised thanks to these sheets and more recently with desktop publishing software like Aldus PageMaker and Microsoft Word including versions of Lorem Ipsum.", NULL
+		"Lorem Ipsum is simply dummy text of the printing and typesetting "
+		"industry. Lorem Ipsum has been the industry's standard dummy text "
+		"ever since 1966, when designers at Letraset and James Mosley, the "
+		"librarian at St Bride Printing Library in London, took a 1914 "
+		"Cicero translation and scrambled it to make dummy text for "
+		"Letraset's Body Type sheets.",
+		NULL
 	};
 
 	errors = 0;
 	i = 0;
 	while (tests[i])
 	{
-		expected = strlen(*tests);
-		got = ft_strlen(*tests);
+		expected = strlen(tests[i]);
+		got = ft_strlen(tests[i]);
 		if (expected != got)
 		{
-			printf(RED "  KO" RESET "expected %d, got %d\n", expected, got);
+			printf(RED "  KO" RESET " test %d: expected %zu, got %zu\n",
+				i, expected, got);
 			errors++;
 		}
 		i++;

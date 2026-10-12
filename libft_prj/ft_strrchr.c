@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: romankovinia <romankovinia@student.42.f    +#+  +:+       +#+        */
+/*   By: rkovinia <rkovinia@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/07 14:55:04 by rkovinia          #+#    #+#             */
-/*   Updated: 2026/10/09 21:35:51 by romankovini      ###   ########.fr       */
+/*   Updated: 2026/10/12 11:32:33 by rkovinia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
