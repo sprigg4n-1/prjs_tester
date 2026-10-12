@@ -6,11 +6,11 @@
 /*   By: rkovinia <rkovinia@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/06 14:12:45 by rkovinia          #+#    #+#             */
-/*   Updated: 2026/10/06 14:34:15 by rkovinia         ###   ########.fr       */
+/*   Updated: 2026/10/12 13:47:48 by rkovinia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 int	ft_isalnum(int c)
 {
