@@ -6,7 +6,7 @@
 /*   By: rkovinia <rkovinia@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/08 11:26:08 by rkovinia          #+#    #+#             */
-/*   Updated: 2026/10/13 12:24:25 by rkovinia         ###   ########.fr       */
+/*   Updated: 2026/10/13 12:35:53 by rkovinia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,7 @@ int	test_lstadd_front(void);
 int	test_lstsize(void);
 int	test_lstlast(void);
 int	test_lstadd_back(void);
+int	test_lstdelone(void);
 
 int	main(void)
 {
@@ -94,5 +95,6 @@ int	main(void)
 	errors += test_lstsize();
 	errors += test_lstlast();
 	errors += test_lstadd_back();
+	errors += test_lstdelone();
 	return (errors != 0);
 }
