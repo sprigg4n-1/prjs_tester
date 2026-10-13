@@ -3,8 +3,8 @@ CC			= cc
 
 CFLAGS		= -Wall -Wextra -Werror
 
-LIBFT_DIR	= ./libft_prj
-# LIBFT_DIR	= ../libft
+# LIBFT_DIR	= ./libft_prj
+LIBFT_DIR	= ../libft
 
 FT_SRCS		= $(wildcard $(LIBFT_DIR)/ft_*.c)
 TEST_SRCS	= main.c $(wildcard libft/test_*.c)

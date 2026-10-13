@@ -46,6 +46,7 @@ int	test_atoi(void)
 	errors += check_atoi("   ", __LINE__);
 	errors += check_atoi("\x1b 5", __LINE__);
 	errors += check_atoi("1e5", __LINE__);
+	errors += check_atoi("+\n1e5", __LINE__);
 	if (errors == 0)
 		printf(GREEN "[OK]" RESET " ft_atoi\n");
 	else
