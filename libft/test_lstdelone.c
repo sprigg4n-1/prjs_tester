@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   test_lstdelone.c                                   :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: rkovinia <rkovinia@student.42heilbronn.    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/13 12:30:43 by rkovinia          #+#    #+#             */
-/*   Updated: 2026/10/13 12:36:03 by rkovinia         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -22,7 +10,6 @@
 static int	g_del_calls;
 static void	*g_del_arg;
 
-/* del for heap strings: frees them and remembers what it got */
 static void	del_free(void *content)
 {
 	g_del_calls++;
@@ -30,7 +17,6 @@ static void	del_free(void *content)
 	free(content);
 }
 
-/* del for content that must not be freed (e.g. string literals) */
 static void	del_nothing(void *content)
 {
 	g_del_calls++;

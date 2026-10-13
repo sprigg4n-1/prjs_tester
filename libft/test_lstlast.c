@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   test_lstlast.c                                     :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: rkovinia <rkovinia@student.42heilbronn.    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/13 11:44:28 by rkovinia          #+#    #+#             */
-/*   Updated: 2026/10/13 12:11:56 by rkovinia         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -31,7 +19,6 @@ static void	free_list(t_list *lst)
 	}
 }
 
-/* Builds a list from words, in the same order as the array. */
 static t_list	*make_list(const char **words, int n)
 {
 	t_list	*list;

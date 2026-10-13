@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   test_putstr_fd.c                                   :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: rkovinia <rkovinia@student.42heilbronn.    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/13 10:30:53 by rkovinia          #+#    #+#             */
-/*   Updated: 2026/10/13 10:31:00 by rkovinia         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
@@ -20,7 +8,6 @@
 #define RESET "\033[0m"
 #define BUF_SIZE 8192
 
-/* Writes s into a pipe with ft_putstr_fd, then reads back everything. */
 static int	check_putstr(char *s, int line)
 {
 	int		fds[2];

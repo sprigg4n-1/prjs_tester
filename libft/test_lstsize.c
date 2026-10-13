@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   test_lstsize.c                                     :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: rkovinia <rkovinia@student.42heilbronn.    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/13 11:37:58 by rkovinia          #+#    #+#             */
-/*   Updated: 2026/10/13 11:38:16 by rkovinia         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include <stdio.h>
 #include <stdlib.h>
 #include "libft.h"
@@ -30,7 +18,6 @@ static void	free_list(t_list *lst)
 	}
 }
 
-/* Builds a list of n nodes (content is NULL, only the count matters). */
 static t_list	*make_list(int n)
 {
 	t_list	*list;

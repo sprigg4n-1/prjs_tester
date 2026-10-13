@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   test_lstadd_back.c                                 :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: rkovinia <rkovinia@student.42heilbronn.    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/13 12:14:37 by rkovinia          #+#    #+#             */
-/*   Updated: 2026/10/13 12:24:09 by rkovinia         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -31,7 +19,6 @@ static void	free_list(t_list *lst)
 	}
 }
 
-/* Checks that the list holds exactly the strings in expected, in order. */
 static int	check_list(t_list *lst, const char **expected, const char *label)
 {
 	size_t	i;

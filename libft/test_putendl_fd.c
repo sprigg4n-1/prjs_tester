@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   test_putendl_fd.c                                  :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: rkovinia <rkovinia@student.42heilbronn.    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/13 10:35:36 by rkovinia          #+#    #+#             */
-/*   Updated: 2026/10/13 10:35:43 by rkovinia         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
@@ -20,8 +8,6 @@
 #define RESET "\033[0m"
 #define BUF_SIZE 8192
 
-/* Writes s into a pipe with ft_putendl_fd, then reads back everything.
-   Expected output: the string followed by exactly one '\n'. */
 static int	check_putendl(char *s, int line)
 {
 	int		fds[2];

@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   test_lstclear.c                                    :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: rkovinia <rkovinia@student.42heilbronn.    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/13 12:45:06 by rkovinia          #+#    #+#             */
-/*   Updated: 2026/10/13 12:45:14 by rkovinia         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -27,7 +15,6 @@ static void	del_free(void *content)
 	free(content);
 }
 
-/* Builds a list of n nodes, each holding a heap copy of "node" */
 static t_list	*make_list(int n)
 {
 	t_list	*list;

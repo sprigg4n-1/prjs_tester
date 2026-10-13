@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   test_lstiter.c                                     :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: rkovinia <rkovinia@student.42heilbronn.    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/13 12:51:19 by rkovinia          #+#    #+#             */
-/*   Updated: 2026/10/13 12:51:43 by rkovinia         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -34,7 +22,6 @@ static void	free_list(t_list *lst)
 	}
 }
 
-/* Builds a list from words, in the same order as the array. */
 static t_list	*make_list(char **words, int n)
 {
 	t_list	*list;
@@ -47,7 +34,6 @@ static t_list	*make_list(char **words, int n)
 	return (list);
 }
 
-/* f that records the first letter of each content it receives */
 static void	record(void *content)
 {
 	g_seen[g_calls] = ((char *)content)[0];
@@ -55,7 +41,6 @@ static void	record(void *content)
 	g_seen[g_calls] = '\0';
 }
 
-/* f that changes the content in place */
 static void	to_upper(void *content)
 {
 	char	*s;

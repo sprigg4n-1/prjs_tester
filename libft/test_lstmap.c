@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   test_lstmap.c                                      :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: rkovinia <rkovinia@student.42heilbronn.    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/13 13:07:06 by rkovinia          #+#    #+#             */
-/*   Updated: 2026/10/13 13:08:28 by rkovinia         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -21,7 +9,6 @@
 
 static int	g_f_calls;
 
-/* f: returns a NEW uppercase copy of the string (old content untouched) */
 static void	*upper_copy(void *content)
 {
 	char	*copy;
@@ -46,7 +33,6 @@ static void	del_free(void *content)
 	free(content);
 }
 
-/* frees only the nodes, for the original list built from literals */
 static void	free_nodes(t_list *lst)
 {
 	t_list	*next;
@@ -71,7 +57,6 @@ static t_list	*make_list(const char **words, int n)
 	return (list);
 }
 
-/* Compares a list with the expected strings, in order. */
 static int	same_words(t_list *lst, const char **expected, int n)
 {
 	int	i;

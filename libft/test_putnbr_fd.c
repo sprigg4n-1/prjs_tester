@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   test_putnbr_fd.c                                   :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: rkovinia <rkovinia@student.42heilbronn.    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/13 10:41:27 by rkovinia          #+#    #+#             */
-/*   Updated: 2026/10/13 10:41:42 by rkovinia         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include <stdio.h>
 #include <string.h>
 #include <limits.h>
@@ -20,7 +8,6 @@
 #define RED   "\033[31m"
 #define RESET "\033[0m"
 
-/* Writes n into a pipe with ft_putnbr_fd, then compares with printf's %d. */
 static int	check_putnbr(int n)
 {
 	int		fds[2];

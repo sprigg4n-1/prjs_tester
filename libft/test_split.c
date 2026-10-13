@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   test_split.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: rkovinia <rkovinia@student.42heilbronn.    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/12 17:34:51 by rkovinia          #+#    #+#             */
-/*   Updated: 2026/10/12 17:36:03 by rkovinia         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -43,7 +31,6 @@ static void	print_split(char **arr)
 	printf("NULL]");
 }
 
-/* expected is a NULL-terminated list of words */
 static int	check_split(const char *s, char c, const char **expected, int line)
 {
 	char	**got;
