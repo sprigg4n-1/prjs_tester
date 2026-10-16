@@ -3,11 +3,11 @@ CC			= cc
 
 CFLAGS		= -Wall -Wextra -Werror
 
-# LIBFT_DIR	= ./libft_prj
-LIBFT_DIR	= ../libft
+LIBFT_DIR	= ./libft/libft_prj
+# LIBFT_DIR	= ../libft
 
 FT_SRCS		= $(wildcard $(LIBFT_DIR)/ft_*.c)
-TEST_SRCS	= main.c $(wildcard libft/test_*.c)
+TEST_SRCS	= main.c $(wildcard libft/libft_tests/test_*.c)
 
 ifeq ($(shell uname), Linux)
 	LDLIBS = -lbsd
