@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: romankovinia <romankovinia@student.42.f    +#+  +:+       +#+        */
+/*   By: rkovinia <rkovinia@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/16 23:35:27 by romankovini       #+#    #+#             */
-/*   Updated: 2026/10/19 13:23:22 by romankovini      ###   ########.fr       */
+/*   Updated: 2026/10/19 14:16:55 by rkovinia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
-# include "libft.h"
+# include "libft/libft.h"
 # include <stdarg.h>
 
 int	ft_printf(const char *format, ...);
