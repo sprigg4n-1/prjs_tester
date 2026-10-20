@@ -6,40 +6,52 @@
 /*   By: rkovinia <rkovinia@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/16 23:34:42 by romankovini       #+#    #+#             */
-/*   Updated: 2026/10/19 14:19:51 by rkovinia         ###   ########.fr       */
+/*   Updated: 2026/10/20 13:13:12 by rkovinia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
+static int	ft_conversion(va_list *ptr, char c)
+{
+	int		len;
+	char	*str;
+
+	len = 0;
+	if (c == 's')
+	{
+		str = va_arg(*ptr, char *);
+		if (str == NULL)
+		{
+			ft_putstr_fd("(null)", 1);
+			len = 6;
+		}
+		else
+		{
+			ft_putstr_fd(str, 1);
+			len = ft_strlen(str);
+		}
+
+	}
+	return (len);
+}
 
 int	ft_printf(const char *format, ...)
 {
 	int		count;
 	va_list	ptr;
-	int		ch_nmb;
-	char	*str;
 
 	count = 0;
 	va_start(ptr, format);
 	while (*format)
 	{
-		if (*format == 'd')
+		if (*format == '%' && *(format + 1) != '\0')
 		{
-			ch_nmb = va_arg(ptr, int);
-			ft_putnbr_fd(ch_nmb, 1);
+			format++;
+			ft_conversion(&ptr, *format);
 		}
-		else if (*format == 'c')
-		{
-			ch_nmb = va_arg(ptr, int);
-			ft_putchar_fd(ch_nmb, 1);
-		}
-		else if (*format == 's')
-		{
-			str = va_arg(ptr, char *);
-			ft_putstr_fd(str, 1);
-		}
-		write(1, "\n", 1);
+		else
+			write(1, format, 1);
 		format++;
 	}
 	va_end(ptr);
@@ -48,6 +60,6 @@ int	ft_printf(const char *format, ...)
 
 int	main(void)
 {
-	ft_printf("ddccss", 32, 42, 'A', 'B', "HELLO", "WORLD");
+	ft_printf("I want to say: %s %s", "HELLO", NULL);
 	return (0);
 }
