@@ -6,7 +6,7 @@
 /*   By: rkovinia <rkovinia@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/21 14:15:04 by rkovinia          #+#    #+#             */
-/*   Updated: 2026/10/21 14:27:31 by rkovinia         ###   ########.fr       */
+/*   Updated: 2026/10/21 18:26:55 by rkovinia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,17 @@
 static int	ft_print_p(void *p)
 {
 	int	write_len;
+	int	num_len;
 
 	if (!p)
 		return (write(1, "(nil)", 5));
 	write_len = write(1, "0x", 2);
-	return (write_len + ft_base_convertor((unsigned long)p, 16,
-			"0123456789abcdef"));
+	if (write_len == -1)
+		return (-1);
+	num_len = ft_base_convertor((unsigned long)p, 16, "0123456789abcdef");
+	if (num_len == -1)
+		return (-1);
+	return (write_len + num_len);
 }
 
 int	ft_print_hex(va_list *ptr, char c)
